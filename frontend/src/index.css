@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    font-feature-settings: 'kern';
+  }
+}
+
+@layer components {
+  /*
+   * Risk is never communicated by colour alone. Each band pairs a colour with
+   * a distinct underline treatment — solid, dashed, double — so the highlight
+   * remains readable with any form of colour vision, in greyscale, and when
+   * printed. Each sentence also carries a text label in its tooltip and in the
+   * evidence panel.
+   */
+  .risk-low {
+    @apply bg-teal-50 decoration-teal-600 underline decoration-solid decoration-1 underline-offset-4;
+  }
+  .risk-medium {
+    @apply bg-amber-50 decoration-amber-700 underline decoration-dashed decoration-2 underline-offset-4;
+  }
+  .risk-high {
+    @apply bg-rose-50 decoration-rose-700 underline decoration-double decoration-2 underline-offset-4;
+  }
+  .risk-not_scored {
+    @apply text-slate-500;
+  }
+
+  .sentence-button {
+    @apply cursor-pointer rounded-sm px-0.5 transition-colors;
+  }
+  .sentence-button:hover {
+    @apply bg-slate-200;
+  }
+  .sentence-selected {
+    @apply bg-slate-900/10 ring-2 ring-slate-900/40;
+  }
+}
