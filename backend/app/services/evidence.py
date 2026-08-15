@@ -221,27 +221,46 @@ def build_explanation(summaries: list[SignalSummary], risk: float) -> str:
             "measurable property."
         )
 
-    toward_machine = [s for s in summaries if s.direction == "machine"]
-    toward_human = [s for s in summaries if s.direction == "human"]
-
-    leading = summaries[0]
+    verdict_direction = "machine" if risk >= 0.5 else "human"
     verdict = "machine-like" if risk >= 0.5 else "consistent with human writing"
 
-    parts: list[str] = [
-        f"Scored {verdict}, driven mainly by {leading.family.lower()}, "
-        f"which is {leading.descriptor}."
-    ]
+    # Families are split by which way they pushed, and the explanation is built
+    # from those two lists rather than from the overall ranking.
+    #
+    # Ranking by magnitude alone produced self-contradictory text: when the
+    # single largest family opposed the verdict, it was named as what "drove"
+    # the score and then named again as "pushing the other way" in the same
+    # breath. What drove a verdict can only be a family that pointed toward it.
+    supporting_families = [s for s in summaries if s.direction == verdict_direction]
+    opposing_families = [s for s in summaries if s.direction != verdict_direction]
 
-    supporting = [s for s in (toward_machine if risk >= 0.5 else toward_human)][1:3]
-    if supporting:
-        described = ", ".join(f"{s.family.lower()} ({s.descriptor})" for s in supporting)
-        parts.append(f"Also contributing: {described}.")
+    parts: list[str] = []
 
-    # Naming the counter-evidence is what keeps the panel honest: a one-sided
+    if supporting_families:
+        leading = supporting_families[0]
+        parts.append(
+            f"Scored {verdict}, driven mainly by {leading.family.lower()}, "
+            f"which is {leading.descriptor}."
+        )
+        supporting = supporting_families[1:3]
+        if supporting:
+            described = ", ".join(
+                f"{s.family.lower()} ({s.descriptor})" for s in supporting
+            )
+            parts.append(f"Also contributing: {described}.")
+    else:
+        # Every named family opposed the verdict, which happens when the score
+        # rests on many small effects none of which cleared the reporting
+        # threshold. Saying so is more honest than promoting a contrary signal.
+        parts.append(
+            f"Scored {verdict}, though no single signal family drove it; the "
+            "score rests on the combination of many small effects."
+        )
+
+    # Naming the counter-evidence keeps the panel honest: a one-sided
     # explanation reads as more certain than the model actually is.
-    opposing = toward_human if risk >= 0.5 else toward_machine
-    if opposing:
-        strongest_opposing = opposing[0]
+    if opposing_families:
+        strongest_opposing = opposing_families[0]
         parts.append(
             f"Pushing the other way: {strongest_opposing.family.lower()}, "
             f"{strongest_opposing.descriptor}."
