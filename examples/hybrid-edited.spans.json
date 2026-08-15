@@ -1,0 +1,243 @@
+{
+  "source": "examples/human-written.txt",
+  "model": "gemini-3.1-flash-lite",
+  "rewritten_sentence_indices": [
+    1,
+    2,
+    5,
+    8,
+    15,
+    17,
+    18,
+    20,
+    21,
+    23,
+    25,
+    27,
+    28,
+    32,
+    33,
+    34
+  ],
+  "sentence_count": 36,
+  "rewritten_count": 16,
+  "rewritten_fraction": 0.444,
+  "sentences": [
+    {
+      "index": 0,
+      "is_rewritten": false,
+      "original": "The Wednesday Table",
+      "text": "The Wednesday Table"
+    },
+    {
+      "index": 1,
+      "is_rewritten": true,
+      "original": "My grandmother could not read the bus timetable.",
+      "text": "My grandmother was unable to read the bus timetable."
+    },
+    {
+      "index": 2,
+      "is_rewritten": true,
+      "original": "She had been in this country for eleven years by then and she still could not read it, and every Wednesday she took the 14A to the community centre anyway, counting stops under her breath.",
+      "text": "Though she had lived in this country for eleven years, she still could not read it; nonetheless, she took the 14A to the community centre every Wednesday, counting the stops under her breath."
+    },
+    {
+      "index": 3,
+      "is_rewritten": false,
+      "original": "I was nine when she started bringing me along.",
+      "text": "I was nine when she started bringing me along."
+    },
+    {
+      "index": 4,
+      "is_rewritten": false,
+      "original": "My job, as she explained it, was to hold the transfer ticket.",
+      "text": "My job, as she explained it, was to hold the transfer ticket."
+    },
+    {
+      "index": 5,
+      "is_rewritten": true,
+      "original": "This was not really my job.",
+      "text": "This was not actually my responsibility."
+    },
+    {
+      "index": 6,
+      "is_rewritten": false,
+      "original": "My job was to read the signs.",
+      "text": "My job was to read the signs."
+    },
+    {
+      "index": 7,
+      "is_rewritten": false,
+      "original": "We never discussed this arrangement.",
+      "text": "We never discussed this arrangement."
+    },
+    {
+      "index": 8,
+      "is_rewritten": true,
+      "original": "She would look at a sign, then look at me, and I would say the name of the street, and she would nod as though confirming something she already knew.",
+      "text": "She would glance at a sign, then at me, and after I named the street, she would nod as if confirming something she already knew."
+    },
+    {
+      "index": 9,
+      "is_rewritten": false,
+      "original": "For three years I believed I was helping her.",
+      "text": "For three years I believed I was helping her."
+    },
+    {
+      "index": 10,
+      "is_rewritten": false,
+      "original": "It took me until high school to understand that she had memorised the route within a month, and that what she actually needed was for me to keep talking.",
+      "text": "It took me until high school to understand that she had memorised the route within a month, and that what she actually needed was for me to keep talking."
+    },
+    {
+      "index": 11,
+      "is_rewritten": false,
+      "original": "At the community centre she taught a knitting class to six other women.",
+      "text": "At the community centre she taught a knitting class to six other women."
+    },
+    {
+      "index": 12,
+      "is_rewritten": false,
+      "original": "I sat in the corner with my homework and listened to them argue in four languages about whether a particular stitch was worth the trouble.",
+      "text": "I sat in the corner with my homework and listened to them argue in four languages about whether a particular stitch was worth the trouble."
+    },
+    {
+      "index": 13,
+      "is_rewritten": false,
+      "original": "Mrs. Adeyemi thought it was not.",
+      "text": "Mrs. Adeyemi thought it was not."
+    },
+    {
+      "index": 14,
+      "is_rewritten": false,
+      "original": "My grandmother thought it was.",
+      "text": "My grandmother thought it was."
+    },
+    {
+      "index": 15,
+      "is_rewritten": true,
+      "original": "Nobody ever won, which I now think was the point.",
+      "text": "No one ever won, which I now believe was the point."
+    },
+    {
+      "index": 16,
+      "is_rewritten": false,
+      "original": "The knitting was not the point either.",
+      "text": "The knitting was not the point either."
+    },
+    {
+      "index": 17,
+      "is_rewritten": true,
+      "original": "One Wednesday a woman I had never seen came in and sat down and did not pick up any needles.",
+      "text": "One Wednesday, a woman I had never seen before arrived, sat down, and did not pick up any needles."
+    },
+    {
+      "index": 18,
+      "is_rewritten": true,
+      "original": "She just sat.",
+      "text": "She simply sat there."
+    },
+    {
+      "index": 19,
+      "is_rewritten": false,
+      "original": "My grandmother poured her tea and kept teaching, and did not ask her anything at all, and the woman came back the next week, and the week after that, and eventually she picked up the needles.",
+      "text": "My grandmother poured her tea and kept teaching, and did not ask her anything at all, and the woman came back the next week, and the week after that, and eventually she picked up the needles."
+    },
+    {
+      "index": 20,
+      "is_rewritten": true,
+      "original": "I asked my grandmother once why she never asked that woman what was wrong.",
+      "text": "I once asked my grandmother why she never asked that woman what was troubling her."
+    },
+    {
+      "index": 21,
+      "is_rewritten": true,
+      "original": "She said, in Punjabi, that a question is a door you hold open, and if you push someone through it you have not really opened anything.",
+      "text": "She replied in Punjabi that a question is like a door you hold open; if you push someone through it, you haven't truly opened anything at all."
+    },
+    {
+      "index": 22,
+      "is_rewritten": false,
+      "original": "I have thought about that sentence more than any lesson I received in school.",
+      "text": "I have thought about that sentence more than any lesson I received in school."
+    },
+    {
+      "index": 23,
+      "is_rewritten": true,
+      "original": "When I began tutoring at the refugee resettlement centre last year, I arrived with a curriculum.",
+      "text": "When I began tutoring at the refugee resettlement centre last year, I arrived prepared with a curriculum."
+    },
+    {
+      "index": 24,
+      "is_rewritten": false,
+      "original": "I had planned units.",
+      "text": "I had planned units."
+    },
+    {
+      "index": 25,
+      "is_rewritten": true,
+      "original": "I had assessment rubrics I was proud of.",
+      "text": "I had developed assessment rubrics I was quite proud of."
+    },
+    {
+      "index": 26,
+      "is_rewritten": false,
+      "original": "In my second week a fifteen-year-old named Behzad told me, very politely, that he did not want to learn the past perfect tense, and I discovered that my rubrics had no row for that.",
+      "text": "In my second week a fifteen-year-old named Behzad told me, very politely, that he did not want to learn the past perfect tense, and I discovered that my rubrics had no row for that."
+    },
+    {
+      "index": 27,
+      "is_rewritten": true,
+      "original": "So I put them away and asked him what he did want.",
+      "text": "So, I set them aside and asked him what he actually wanted."
+    },
+    {
+      "index": 28,
+      "is_rewritten": true,
+      "original": "He wanted to know how to argue with his landlord.",
+      "text": "He wanted to learn how to argue with his landlord."
+    },
+    {
+      "index": 29,
+      "is_rewritten": false,
+      "original": "We spent four sessions on that.",
+      "text": "We spent four sessions on that."
+    },
+    {
+      "index": 30,
+      "is_rewritten": false,
+      "original": "His English did not improve measurably.",
+      "text": "His English did not improve measurably."
+    },
+    {
+      "index": 31,
+      "is_rewritten": false,
+      "original": "He got his radiator fixed.",
+      "text": "He got his radiator fixed."
+    },
+    {
+      "index": 32,
+      "is_rewritten": true,
+      "original": "I am still not sure whether that was good teaching.",
+      "text": "I am still not sure if that constituted good teaching."
+    },
+    {
+      "index": 33,
+      "is_rewritten": true,
+      "original": "I am fairly sure it was the right thing to do, and I have started to suspect those are different questions, and that most of the interesting problems live in the gap between them.",
+      "text": "I am fairly sure it was the right thing to do; I have begun to suspect that those are different questions, and that most interesting problems exist in the gap between them."
+    },
+    {
+      "index": 34,
+      "is_rewritten": true,
+      "original": "My grandmother died in March.",
+      "text": "My grandmother passed away in March."
+    },
+    {
+      "index": 35,
+      "is_rewritten": false,
+      "original": "I took the 14A to her service, and I counted the stops.",
+      "text": "I took the 14A to her service, and I counted the stops."
+    }
+  ]
+}
